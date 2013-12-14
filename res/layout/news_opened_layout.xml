@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/header">
+        <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/logo" android:layout_centerInParent="true" android:id="@+id/big_logo_image" ></ImageView>
+        <RelativeLayout android:id="@+id/relativeLayout3" android:layout_width="fill_parent" android:layout_below="@+id/big_logo_image" android:background="@color/text_inactive" android:layout_height="1dip"></RelativeLayout>
+    </RelativeLayout>
+    <ScrollView android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:padding="15dip" android:id="@+id/relativeLayout1" android:layout_height="fill_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:text="Title" android:id="@+id/news_opened_title"></TextView>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="date" android:layout_below="@+id/news_opened_title" android:id="@+id/news_opened_date" android:textColor="@color/text_inactive"></TextView>
+            <RelativeLayout android:id="@+id/news_opened_image_container" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@id/news_opened_date" android:background="@color/text_inactive" android:padding="1dip">
+                <WebView android:layout_height="wrap_content" android:id="@+id/news_opened_image" android:layout_width="200dip"></WebView>
+            </RelativeLayout>
+            <ViewFlipper android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/news_opened_flipper" android:layout_below="@id/news_opened_image_container">
+                <RelativeLayout android:id="@+id/relativeLayout2" android:layout_height="fill_parent" android:layout_width="fill_parent">
+                    <ProgressBar android:id="@+id/progressBar1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"></ProgressBar>
+                </RelativeLayout>
+                <TextView android:id="@+id/news_opened_text" android:text="TextView" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+            </ViewFlipper>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/news_opened_button_back" android:layout_below="@+id/news_opened_flipper" android:clickable="true">
+                <TextView android:layout_height="wrap_content" android:text="TextView" android:layout_width="wrap_content" android:textColor="@drawable/xml_text_background" android:id="@+id/news_opened_button_back_text" android:duplicateParentState="true"></TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

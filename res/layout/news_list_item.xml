@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <RelativeLayout android:id="@+id/news_item_layout" android:layout_height="wrap_content" android:layout_width="fill_parent" android:paddingTop="15dip">
+        <RelativeLayout android:id="@+id/relativeLayout1" android:layout_height="wrap_content" android:layout_width="fill_parent">
+            <LinearLayout android:id="@+id/news_image_layout" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                <WebView android:saveEnabled="false" android:visibility="visible" android:scrollbars="none" android:id="@+id/news_image" android:layout_width="100dip" android:longClickable="false" android:focusableInTouchMode="false" android:focusable="false" android:clickable="false" android:layout_height="wrap_content" android:layout_marginLeft="10dip"></WebView>
+            </LinearLayout>
+            <TextView android:layout_marginLeft="10dip" android:id="@+id/news_header_text" android:layout_height="wrap_content" android:text="TextView" android:layout_width="wrap_content" android:layout_toRightOf="@+id/news_image_layout" android:textSize="18dip" android:textColor="@color/header"></TextView>
+            <TextView android:layout_marginLeft="10dip" android:id="@+id/news_date" android:layout_height="wrap_content" android:text="TextView" android:layout_width="wrap_content" android:layout_toRightOf="@+id/news_image_layout" android:layout_below="@+id/news_header_text"></TextView>
+        </RelativeLayout>
+        <TextView android:layout_height="wrap_content" android:text="TextView" android:layout_width="wrap_content" android:id="@+id/news_text" android:layout_marginLeft="10dip" android:layout_marginTop="10dip" android:layout_below="@+id/relativeLayout1"></TextView>
+    </RelativeLayout>
+</LinearLayout>

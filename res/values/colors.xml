@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="text_active">#ffffff</color>
+<color name="text_inactive">#FEAD13</color>
+<color name="header">#FEAD13</color>
+</resources>
